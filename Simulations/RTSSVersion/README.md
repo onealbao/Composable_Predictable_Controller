@@ -21,3 +21,5 @@ In result, you can check the
 - total cpu time, 
 - total speed switch cost 
 - and total system utility. 
+
+You can also check the scopes in mdl file.
