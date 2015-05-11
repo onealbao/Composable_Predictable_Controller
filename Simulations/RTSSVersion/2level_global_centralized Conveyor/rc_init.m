@@ -90,10 +90,12 @@ global rc_INPUT_SEQS_BIG
 global rc_IN_TRACES_NO_BIG
 
 global rc_LOOKAHEAD_STEP_GLOBAL_CHANGE
+global rc_LONG_TERM_RANGE
 
 
 %--------- Initialization of global constants ---------
 rc_LOOKAHEAD_STEP_GLOBAL_CHANGE = 3;
+rc_LONG_TERM_RANGE = 60;
 rc_STATE_SIZE = 3;
 rc_TIME_UNIT = 1;
 rc_INPUT_SET = [0.2564  0.3479  0.4349  0.5219  0.650 0.7829  1.0000];

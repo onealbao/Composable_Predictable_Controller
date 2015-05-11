@@ -43,6 +43,7 @@ global rc_INPUT_SEQS
 global rc_IN_TRACES_NO
 
 global rc_LOOKAHEAD_STEP_GLOBAL_CHANGE
+global rc_LONG_TERM_RANGE
 global TOTALCOST
 
 for init = 1:6
@@ -50,7 +51,7 @@ for init = 1:6
 end
 
 
-if  rc_GLOBAL_TIME <= 60 && rc_GLOBAL_TIME > 0 && rc_CTIME > 10
+if  rc_GLOBAL_TIME <= rc_LONG_TERM_RANGE && rc_GLOBAL_TIME > 0 && rc_CTIME > 10
 
     q_level(rc_GLOBAL_TIME)  = cm(7) ;
     q1_level(rc_GLOBAL_TIME) = cm(8) ;
