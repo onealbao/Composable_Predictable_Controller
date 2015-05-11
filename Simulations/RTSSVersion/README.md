@@ -14,7 +14,7 @@ Right click rc_init.m select run, and select change folders. After that please r
 to run this initialization file first. Finally please open the .mdl file to run the simulation.
 
 In simulation 1,2,3,4, you can change the look ahead step in rc_init.m, the variable is rc_LOOKAHEAD_STEPS.
-In simulation 5,6, you can change the look ahead step in rc_init.m, the variable is rc_LOOKAHEAD_STEP_GLOBAL_CHANGE.
+In simulation 5,6, you can change the look ahead step in rc_init.m, the variable is rc_LOOKAHEAD_STEP_GLOBAL_CHANGE. You can change the long term prediction range in rc_init.m, the variable is rc_LONG_TERM_RANGE.
 
 In result, you can check the 
 - total throughput, 
