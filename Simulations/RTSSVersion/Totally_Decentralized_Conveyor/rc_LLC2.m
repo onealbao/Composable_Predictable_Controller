@@ -76,4 +76,4 @@ for i = 1:rc_IN_TRACES_NO,
        
     end
 end
-    TOTALCOST = TOTALCOST + best_util;
+%    TOTALCOST = TOTALCOST + best_util;

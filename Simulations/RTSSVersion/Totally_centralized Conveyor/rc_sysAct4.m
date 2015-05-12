@@ -33,9 +33,14 @@ global u_max4
 global alpha
 global e4
 global ein4
-global total_y
 global total_e
+global total_y
+global round_num4
+global buffer4
+global q_max
+global  q_overflow
 global total_Speed_Switch
+global TOTALCOST
 persistent cur_state;
 
 if rc_CTIME == 0,
@@ -46,9 +51,16 @@ else
     q = x(1); % last queue level
     y = x(2); % last throuput -- no use
     
-    ein4(rc_CTIME) = v(1);
+    %ein4(rc_CTIME) = v(1);
+ 
+    if rc_CTIME > 5
+        round_num4 = round_num4 + 1;
+        buffer4(round_num4) = v(1);
+      %  test = buffer4(round_num4)
+       
+    end
     
-   
+    
     % read incoming packages
     read_ar = v(1);
     % new velocity after receive control input
@@ -57,21 +69,39 @@ else
     next_y = min(q,adjust_u * rc_TIME_UNIT);
     % next queue level
     next_q = max(q + (read_ar - next_y)*rc_TIME_UNIT, 0);
+    if next_q > q_max
+        next_q = q_max;
+         q_overflow = q_overflow+1;
+    end
     % next energy consumption
     next_ec = alpha * adjust_u * adjust_u;
     % output signal
     next_x = [next_q next_y adjust_u next_ec read_ar v(2) e4(rc_CTIME) ];
     
+    total_y =  total_y + next_y;
     total_e = total_e + next_ec;
-     total_y = total_y + next_y;
-          total_Speed_Switch = total_Speed_Switch + abs(adjust_u-x(3));
+     total_Speed_Switch = total_Speed_Switch + abs(adjust_u-x(3));
+     
+    x1 = next_ec*next_ec;
+    x2 = next_y*next_y;
+    x3 = abs(x(3)-adjust_u);
+
+  costMatrix = -(x1)/(1000*1000*1000*1000*alpha*alpha) + (x2)/(1000*1000)-x3/774*7/1000;
+
+ 
+   TOTALCOST = TOTALCOST + costMatrix;
+     
 end
 
 
 cur_state = next_x;
  if rc_CTIME == 8999,
-    mean_of_estimation4 = mean(e4)
-    std_of_estimation4 = std(e4)
+    for x = 1: 8998
+        ee4(x) = e4(x+1);
+    end   
+    mean_of_estimation4 = mean(ee4)
+   
+    std_of_estimation4 = std(ee4)
  end
 
 

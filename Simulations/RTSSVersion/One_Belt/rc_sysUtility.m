@@ -50,7 +50,7 @@ for i = 2: rc_LOOKAHEAD_STEPS+1,
 %    
 %   costMatrix =  -sqrt(ec) + y-q;
  % costMatrix = -nthroot(abs(x1-256*256*256*256)/(1000*1000*1000*1000*alpha*alpha),4) + x2/(1000*1000) - x3/1500;
-  costMatrix = -(x1-256*256*256*256)/(1000*1000*1000*1000*alpha*alpha) + (x2-256*256)/(1000*1000) - x3/1500;
+  costMatrix= -(x1)/(1000*1000*1000*1000*alpha*alpha) + (x2)/(1000*1000) - x3/744*7/1000;
 %   costMatrix = -x1/(1000*1000*1000*1000*alpha*alpha) + x2/(1000*1000) + x3/1500;
  
    J_temp = J_temp + costMatrix;

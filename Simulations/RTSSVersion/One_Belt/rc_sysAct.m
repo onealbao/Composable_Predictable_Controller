@@ -80,6 +80,15 @@ else
     
     total_e = total_e + next_ec;
     finalspeed(rc_CTIME) = adjust_u;
+    
+    
+    x1 = next_ec*next_ec;
+    x2 = next_y * next_y;
+    x3 = abs(x(3)-adjust_u);
+
+  costMatrix = (x1)/(1000*1000*1000*1000*alpha*alpha) +(x2)/(1000*1000)-x3/774*7/1000;
+
+   TOTALCOST = TOTALCOST + costMatrix;
 end
 
 
@@ -96,8 +105,5 @@ if rc_CTIME == 8999,
     save a11 a1
     save a22 a2
     save a33 a3
-
-
-    save speed ssppeedd
     
 end

@@ -104,7 +104,7 @@ for i = 1:rc_IN_TRACES_NO,
        
     end
 end
- TOTALCOST = TOTALCOST + best_util;
+ %TOTALCOST = TOTALCOST + best_util;
 
  %%
  %SEGMENT 1
@@ -147,7 +147,7 @@ for i = 1:rc_IN_TRACES_NO,
        
     end
 end
-  TOTALCOST = TOTALCOST+ best_util;
+%  TOTALCOST = TOTALCOST+ best_util;
   
 %%
  %SEGMENT 2
@@ -189,7 +189,7 @@ for i = 1:rc_IN_TRACES_NO,
        
     end
 end
-TOTALCOST = TOTALCOST + best_util;
+%TOTALCOST = TOTALCOST + best_util;
 
 %%
 %SEGMENT 3
@@ -232,7 +232,7 @@ for i = 1:rc_IN_TRACES_NO,
     end
 end
 
-    TOTALCOST = TOTALCOST + best_util;
+ %   TOTALCOST = TOTALCOST + best_util;
     
  %%
  % SEGMENT 4
@@ -274,7 +274,7 @@ for i = 1:rc_IN_TRACES_NO,
        
     end
 end
-TOTALCOST = TOTALCOST + best_util;
+%TOTALCOST = TOTALCOST + best_util;
 
 %%
 %SEGMENT 5
@@ -316,6 +316,6 @@ for i = 1:rc_IN_TRACES_NO,
        
     end
 end
-TOTALCOST = TOTALCOST + best_util;
+%TOTALCOST = TOTALCOST + best_util;
 
 

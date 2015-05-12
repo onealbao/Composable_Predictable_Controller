@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.27"
+    ComputedModelVersion    "1.28"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -30,7 +30,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [127.0, 37.0, 1440.0, 798.0]
+      Location		      [294.0, 72.0, 1440.0, 798.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -96,9 +96,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "zhangpn"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon May 11 11:34:32 2015"
+  LastModifiedDate	  "Tue May 12 10:26:00 2015"
   RTWModifiedTimeStamp	  353182764
-  ModelVersionFormat	  "1.%<AutoIncrement:27>"
+  ModelVersionFormat	  "1.%<AutoIncrement:28>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -914,7 +914,7 @@ Model {
   }
   System {
     Name		    "OneOne_Conveyor"
-    Location		    [127, 37, 1567, 835]
+    Location		    [294, 72, 1734, 870]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1405,8 +1405,8 @@ Model {
       }
       ShowLegends	      off
       TimeRange		      "9000"
-      YMin		      "325~300~521.9~136190~325~0.5219~0.93"
-      YMax		      "475~475~521.9~136190~475~0.5219~1"
+      YMin		      "200~200~250~0~250~0.25~0.9"
+      YMax		      "900~900~1000~500000~550~1~1"
       SaveName		      "ScopeData1"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off

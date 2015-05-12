@@ -26,6 +26,7 @@ global ar2_level
 global ar3_level
 global ar4_level
 global ar5_level
+global rc_INPUT_SET_G
 global rc_LOOKAHEAD_STEPS_G
 global rc_INPUT_SEQS_G
 global rc_IN_TRACES_NO_G
@@ -41,12 +42,11 @@ global rc_INPUT_SEQS
 global rc_IN_TRACES_NO
 
 global rc_LOOKAHEAD_STEP_GLOBAL_CHANGE
-global rc_LONG_TERM_RANGE
 
 v(3) = 0;
 
 
-if  rc_GLOBAL_TIME <= rc_LONG_TERM_RANGE && rc_GLOBAL_TIME > 0 && rc_CTIME > 10
+if  rc_GLOBAL_TIME <= 60 && rc_GLOBAL_TIME > 0 && rc_CTIME > 10
 
     q_level(rc_GLOBAL_TIME)  = u(7) ;
     q1_level(rc_GLOBAL_TIME) = u(8) ;

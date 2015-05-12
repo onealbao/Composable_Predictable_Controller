@@ -73,6 +73,6 @@ for i = 1:rc_IN_TRACES_NO_BIG,
        
     end
 end
- TOTALCOST = TOTALCOST + best_util;
+% TOTALCOST = TOTALCOST + best_util;
 
 

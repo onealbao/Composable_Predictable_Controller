@@ -30,7 +30,7 @@ global TOTALCOST
 persistent last_ar;
 if rc_CTIME > 2,
     temp = cm(5);
-    e1(rc_CTIME) = [last_ar(1) - temp];
+    e1(rc_CTIME) = [(last_ar(1) - temp)/temp];
 end
 
 fx = zeros(rc_LOOKAHEAD_STEPS, rc_STATE_SIZE); % 1*x array
@@ -72,6 +72,6 @@ for i = 1:rc_IN_TRACES_NO,
        
     end
 end
- TOTALCOST = TOTALCOST + best_util;
+% TOTALCOST = TOTALCOST + best_util;
 %rc_CTIME = rc_CTIME + 1;
 

@@ -81,6 +81,15 @@ else
     total_y =  total_y + next_y;
     total_e = total_e + next_ec;
      total_Speed_Switch = total_Speed_Switch + abs(adjust_u-x(3));
+     
+         x1 = next_ec*next_ec;
+    x2 = next_y*next_y;
+    x3 = abs(x(3)-adjust_u);
+
+  costMatrix = -(x1)/(2000*2000*2000*2000*alpha*alpha) + (x2)/(2000*2000) - x3/744/2*7/2000;
+
+ 
+   TOTALCOST = TOTALCOST + costMatrix;
 end
 
 

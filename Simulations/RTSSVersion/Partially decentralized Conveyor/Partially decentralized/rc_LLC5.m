@@ -28,9 +28,9 @@ global e5
 global TOTALCOST
 
 persistent last_ar;
-if rc_CTIME > 2,
+if rc_CTIME > 10,
     temp = cm(5);
-    e5(rc_CTIME) = [last_ar(1) - temp];
+    e5(rc_CTIME) = [(last_ar(1) - temp)/temp];
 end
 
 
@@ -77,5 +77,5 @@ for i = 1:7,
     end
 end
 
- TOTALCOST = TOTALCOST + best_util;
+% TOTALCOST = TOTALCOST + best_util;
 

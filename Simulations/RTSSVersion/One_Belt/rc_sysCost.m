@@ -16,8 +16,7 @@ for i = 2: rc_LOOKAHEAD_STEPS+1,
     x1 = ec*ec;
     x2 = y*y;
     x3 = abs(current_u-adjust_u);
- costMatrix = -(x1)/(1000*1000*1000*1000*alpha*alpha) + (x2)/(1000*1000)-x3/774*7/1000;
-
+  costMatrix = -(x1)/(1000*1000*1000*1000*alpha*alpha) + (x2)/(1000*1000)-x3/774*7/1000;
  
    J_temp = J_temp + costMatrix;
 end

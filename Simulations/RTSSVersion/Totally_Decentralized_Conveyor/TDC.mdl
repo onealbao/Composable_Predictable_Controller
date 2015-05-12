@@ -1,12 +1,12 @@
 Model {
-  Name			  "TD_Conveyor"
+  Name			  "TDC"
   Version		  8.1
   MdlSubVersion		  0
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.25"
+    ComputedModelVersion    "1.26"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -57,7 +57,7 @@ Model {
 	  LoadSaveID		  "0"
 	  Extents		  [1804.0, 828.0]
 	  ZoomFactor		  [0.51346174695529612]
-	  Offset		  [-6.2659065315317619, -14.291807432432513]
+	  Offset		  [-6.2659065315317548, -14.291807432432506]
 	}
 	Object {
 	  $ObjectID		  6
@@ -114,9 +114,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "zhangpn"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon May 11 11:17:06 2015"
+  LastModifiedDate	  "Tue May 12 14:20:34 2015"
   RTWModifiedTimeStamp	  351383762
-  ModelVersionFormat	  "1.%<AutoIncrement:25>"
+  ModelVersionFormat	  "1.%<AutoIncrement:26>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -931,7 +931,7 @@ Model {
     }
   }
   System {
-    Name		    "TD_Conveyor"
+    Name		    "TDC"
     Location		    [50, 0, 1906, 1032]
     Open		    on
     ModelBrowserVisibility  off
@@ -2035,8 +2035,8 @@ Model {
       }
       ShowLegends	      off
       TimeRange		      "9000"
-      YMin		      "100~100~250~30000~100~0.25~0.85"
-      YMax		      "600~600~550~140000~500~0.55~1"
+      YMin		      "400~450~500~125000~450~0.5~0.93"
+      YMax		      "900~650~650~225000~700~0.65~1"
       SaveName		      "ScopeData1"
       DataFormat	      "StructureWithTime"
       LimitDataPoints	      off

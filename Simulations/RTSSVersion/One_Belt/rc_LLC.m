@@ -80,7 +80,7 @@ for i = 1:rc_IN_TRACES_NO,
        current_u = cm(3);
         cur_util = rc_sysCost(fx,current_u);
          
-        if cur_util(1) > best_util
+        if cur_util(1)> best_util
             best_util = cur_util(1);
            
             v = rc_INPUT_SEQS(i,1);
@@ -89,6 +89,5 @@ for i = 1:rc_IN_TRACES_NO,
     end
 end
 
- TOTALCOST = TOTALCOST + best_util;
 
 
